@@ -1,2 +1,3 @@
 # MarbleSolitare
-quick game I made
+simply run "python main.py"
+
