@@ -1,3 +1,4 @@
 # MarbleSolitare
-simply run "python main.py"
 
+#     Run:
+        python main.py
