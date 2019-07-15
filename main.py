@@ -13,11 +13,6 @@ main = grid.GridSystem()
 main.print_grid()
 
 root = Tk()
-colors = {
-    "None": "white",
-    "ball": "blue",
-    "border": "black"
-}
 
 images = {
     "None": PhotoImage(file="None.gif"),
@@ -32,7 +27,6 @@ def update(event, pos):
     if pos == "init":
         for a in range(9):
             for b in range(9):
-                buttons[a][b]["bg"] = colors[str(main.grid[b][a].item_type)]
                 buttons[a][b]["image"] = images[str(main.grid[b][a].item_type)]
                 #
         return
@@ -45,7 +39,6 @@ def update(event, pos):
 
         for a in range(9):
             for b in range(9):
-                buttons[a][b]["bg"] = colors[str(main.grid[b][a].item_type)]
                 buttons[a][b]["image"] = images[str(main.grid[b][a].item_type)]
     else:
         queue[0] = pos
