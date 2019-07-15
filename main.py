@@ -23,7 +23,12 @@ images = {
 
 def update(event, pos):
     print("got event", event)
-    root.winfo_toplevel().title(str(len(queue)))
+    titles = {
+        "1": "Ready to select ball",
+        "0": "Ball selected"
+    }
+    root.winfo_toplevel().title(titles[str(len(queue))])
+    del titles
     if pos == "init":
         for a in range(9):
             for b in range(9):
