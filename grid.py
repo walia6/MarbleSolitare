@@ -68,7 +68,7 @@ class GridSystem:
     def mv(self, _from, over):  # more userfriendly jump function
         return self.grid[_from[0]][_from[1]].jump(self, self.grid[over[0]][over[1]])
 
-    def print_grid(self, fill="type", padding=4):
+    def print_grid(self, fill="type", padding=1):
         colors = {
             "border": bcolors.BOLD,
             "ball": bcolors.OKGREEN,
