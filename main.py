@@ -37,7 +37,9 @@ def update(event, pos):
         return
     if len(queue) == 1:
         queue[1] = pos
-        print("running move command x1: " + str(queue[0][0]) + "  y1: " + str(queue[0][1]) + "  x2: " + str(queue[1][0]) + "  y2: " + str(queue[1][1]))
+        print("running move command x1: " + str(queue[0][0]) + "  y1: "
+              + str(queue[0][1]) + "  x2: " + str(queue[1][0]) + "  y2: "
+              + str(queue[1][1]))
         print(main.mv((queue[0][1], queue[0][0]), (queue[1][1], queue[1][0])))
         main.print_grid()
         del queue[0], queue[1]
