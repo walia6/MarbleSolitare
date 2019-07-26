@@ -4,20 +4,19 @@ from functools import partial
 from Tkinter import *
 import ttk
 
-
 buttons_functions = ndarray((9, 9), object)
 buttons = ndarray((9, 9), object)
 queue = {}
 
 main = grid.GridSystem()
-main.print_grid()
-
 root = Tk()
 
+main.print_grid()
+
 images = {
-    "None": PhotoImage(file="None.gif"),
-    "ball": PhotoImage(file="ball.gif"),
-    "border": PhotoImage(file="border.gif")
+    "None": PhotoImage(file="~/github/MarbleSolitare/None.gif"),
+    "ball": PhotoImage(file="~/github/MarbleSolitare/ball.gif"),
+    "border": PhotoImage(file="~/github/MarbleSolitare/border.gif")
 }
 
 
@@ -57,7 +56,6 @@ for a in range(9):
         buttons[a][b] = Label(root, text="", width=45, height=45)
         buttons[a][b].grid(row=a + 1, column=b + 1)
         buttons[a][b].bind("<Button-1>", partial(update, pos=(a, b)))
-
 
 update("", "init")
 
