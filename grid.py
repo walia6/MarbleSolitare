@@ -107,7 +107,6 @@ class GridSystem:
                     temp += colors[str(_to_return[a][b])] +\
                         str(_to_return[a][b]).ljust(10) + bcolors.ENDC
                 print(temp)
-                for _ in range(padding):
-                    print("")
+                print("\n" * padding)
                 del temp
         del _to_return
